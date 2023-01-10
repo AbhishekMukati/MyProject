@@ -3,7 +3,7 @@ class Patient < ApplicationRecord
   has_many :doctors , through: :appointments 
 
 
-
+  
   # sample comment for git 
 end
 
