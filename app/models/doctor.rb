@@ -4,5 +4,6 @@ class Doctor < ApplicationRecord
   
 
   validates :name, presence: true
-  validates :specialization , presence: true, length:
+  validates :specialization , presence: true
+
 end

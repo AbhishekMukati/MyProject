@@ -1,0 +1,13 @@
+<h1><%= @patient.name %></h1>
+
+<p><%= @patient.disease %></p>
+<p><%= @patient.age%></p>
+<p><%= @patient.gender %></p>
+
+<ul>
+  <li><%= link_to "Change the Patient Details", edit_patient_path(@patient) %></li>
+  <li><%= link_to "Delete the Patient", patient_path(@patient), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure to Delete the patient?"
+                  } %></li>
+</ul>

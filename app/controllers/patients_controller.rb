@@ -16,7 +16,20 @@ class PatientsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
-  end
+  end 
+  def edit
+    @patient = Patient.find(params[:id])
+  end 
+  def update
+    @patient = Patient.find(params[:id])
+
+    if @patient.update(patient_params)
+      redirect_to @patient
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end 
+
   private
   def patient_params
     params.require(:patient).permit(:name, :disease , :age , :gender)

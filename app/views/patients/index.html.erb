@@ -1,14 +1,13 @@
 <h1>All Available Patients</h1>
 
-  <% @patients.each do |patient| %>
-   <h3 style="color: green;">  <%= patient.id %> 
-     <%= patient.name %> 
-   </h3>
-    <h4 style="color: red;"> <%= patient.disease %> </h4> 
-    <%= patient.age %>  
-    <%= patient.gender %> 
- <% end %> 
-  
-
-
- <%= link_to "Create account as Patient", new_patient_path %> 
+<% @patients.each do |patient| %>
+  <h3 style="color: green;">
+    <%= patient.id %>
+      <%= link_to patient.name , patient %>
+  </h3>
+  <h4 style="color: red;">
+    <%= patient.disease %>
+  </h4>
+  <%= patient.age %>
+    <%= patient.gender%>
+      <% end %>
