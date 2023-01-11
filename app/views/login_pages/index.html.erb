@@ -1,0 +1,12 @@
+<h1>LoginPages#index</h1>
+<p>Find me in app/views/login_pages/index.html.erb</p>
+<%= form_for :user, url: '/login_pages' do |form| %>
+               
+        <%= form.label :email %>
+        <%= form.text_field :email %>
+        
+        <%= form.label :password %>
+        <%= form.password_field :password %>
+         
+        <%=  submit_tag("Create Account") %>
+<% end %>

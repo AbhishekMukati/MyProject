@@ -14,6 +14,13 @@
      <div> <%= message %> </div>
      <% end %>
   </div>
+  <div>
+     <%= form.label :password_digest %> <br>
+     <%= form.text_field :password_digest %> 
+     <% @doctor.errors.full_messages_for(:password_digest).each do |message| %>
+     <div> <%= message %> </div>
+     <% end %>
+  </div>
 
   <div>
     <%= form.submit %>

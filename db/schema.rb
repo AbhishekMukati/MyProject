@@ -24,6 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_09_105459) do
   create_table "doctors", force: :cascade do |t|
     t.string "name"
     t.string "specialization"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

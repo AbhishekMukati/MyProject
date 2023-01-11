@@ -1,4 +1,10 @@
 <h1> All Appointments  </h1> 
 
+<% @appointments.each do |appointment| %> 
+  <%= appointment.id %><br>
+  <%= appointment.date %><br> 
 
+   <%= appointment.doctor.name %><br>
+    <%= appointment.patient.name %> <br>
+ <% end %> 
   
