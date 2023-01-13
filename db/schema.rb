@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_09_105459) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_12_063248) do
   create_table "appointments", force: :cascade do |t|
     t.datetime "date"
     t.integer "doctor_id"
@@ -36,6 +36,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_09_105459) do
     t.string "gender"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
 end

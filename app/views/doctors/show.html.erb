@@ -1,14 +1,8 @@
 <h3>More details about <%=  @doctor.name %> </h3>  
 <div> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</div>
-<h3>Select the Appointment</h3>
-  <label for="appointment">Choose Appointment time :</label>
-  <select name="appointment" id=@doctor.id>
-    <option value="a">1:00pm-2:00pm</option>
-    <option value="b">2:00pm-3:00pm</option>
-    <option value="c">3:00pm-4:00pm</option>
-    <option value="d">4:00pm-5:00pm</option>
-  </select>
-  <input type="submit" value="Submit">
-</form>
+</div> 
+ 
+<%= form_with model: @appointment do |form| %>
+<h3><%= link_to "Book Your appointment", new_appointment_path %> </h3>   
+<% end %>
 

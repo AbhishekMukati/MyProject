@@ -1,4 +1,4 @@
-<h1> Add new Doctor </h1> 
+<h1> Sign Up as Doctor </h1> 
 <%= form_with model: @doctor do |form| %>
   <div>
      <%= form.label :name %> <br>
@@ -16,8 +16,10 @@
   </div>
   <div>
      <%= form.label :password_digest %> <br>
-     <%= form.text_field :password_digest %> 
-     <% @doctor.errors.full_messages_for(:password_digest).each do |message| %>
+     <%= form.password_field :password_digest %> <br>
+     <%= form.label :password_digest_Confirmation%> <br>
+     <%= form.password_field :password_digest_Confirmation%>
+     <% @doctor.errors.full_messages_for(:password_digest_Confirmation).each do |message| %>
      <div> <%= message %> </div>
      <% end %>
   </div>

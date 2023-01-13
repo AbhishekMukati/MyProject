@@ -1,2 +1,0 @@
-module LoginPagesHelper
-end

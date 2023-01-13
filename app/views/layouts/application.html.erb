@@ -10,7 +10,10 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body> 
+  <%if current_patient  %> 
+    <%=  current_patient.name  %> 
+  <% end %>
     <%= yield %>
   </body>
 </html>

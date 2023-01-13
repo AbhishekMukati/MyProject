@@ -4,10 +4,12 @@
   <%= doctor.id %>
         <div> <%=  link_to doctor.name ,doctor %> </div>
     <div> <%= doctor.specialization %> </div>
- <% end %> 
-  <h3><%= link_to "Create account as a Doctors ", new_doctor_path %> </h3> 
-   <h3><%= link_to "Create account as a Patient", new_patient_path %> </h3>   
-  
+ <% end %>
+
+  <!-- <h3><%= link_to "Sign up as a Doctors ", new_doctor_path %> </h3>  -->
+ 
+   <h3><%= link_to "Sign up as a Patient", new_patient_path %> </h3>   
+  <h2> <%= link_to "login", login_path %> </h2>
 
 
   
