@@ -13,7 +13,9 @@ class PatientsController < ApplicationController
   def create
     @patient = Patient.new(patient_params)
     if @patient.save
-      redirect_to @patient
+      session[:patient_id]=@patient.id
+      redirect_to doctors_path, notice: "success fully created account"
+
     else
       render :new, status: :unprocessable_entity
     end
@@ -40,7 +42,7 @@ def update
   
   private
     def patient_params
-    params.require(:patient).permit(:name, :disease, :age, :gender, :password_digest)
+    params.require(:patient).permit(:name, :disease, :age, :gender, :password , :password_confirmation)
   end
 
 end

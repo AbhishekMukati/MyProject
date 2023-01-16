@@ -1,8 +1,8 @@
-<h3>More details about <%=  @doctor.name %> </h3>  
-<div> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</div> 
- 
-<%= form_with model: @appointment do |form| %>
-<h3><%= link_to "Book Your appointment", new_appointment_path %> </h3>   
-<% end %>
+More Details <br>
+<%=  @doctor.name %>
+<%=  @doctor.specialization %>
+<%= link_to "Book Your appointment" , new_doctor_appointment_path(@doctor.id) %> 
+
+
+
 

@@ -1,29 +1,29 @@
 class AppointmentsController < ApplicationController
-  def index 
+  def index
     @appointments = Appointment.all
-  end 
-  def new 
-    @patient = Patient.first
-   
-    @appointment = Appointment.new
+  end
+  def show
+    @appointment = Appointment.find(params[:id])
+  end
+  def new
+    current_patient
+    @appointment = @current_patient.appointments.new
+    @doctor=Doctor.find(params[:doctor_id])
   end
   def create
-  
-    @appointment = Appointment.new(date_params)
+    byebug
+    current_patient 
+    @appointment = @current_patient.appointments.new(appointment_params)
+    @appointment.doctor_id = @doctor.id
     if @appointment.save
-      byebug
       redirect_to @appointment
     else
       render :new, status: :unprocessable_entity
     end
   end
 
-  def show
-    @appointment = Appointment.find(params[:id]) 
-  end 
- 
   private
-  def date_params
-  params.require(:appointment).permit(:date)
+  def appointment_params
+    params.require(:appointment).permit(:date)
 end
 end

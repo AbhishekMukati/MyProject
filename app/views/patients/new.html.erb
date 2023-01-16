@@ -40,11 +40,11 @@
           <% end %>
   </div> 
   <div>
-     <%= form.label :password_digest %> <br>
-     <%= form.password_field :password_digest%>   <br>
-     <%= form.label :passwor_digest_Confirmation%> <br>
-     <%= form.password_field :password_digest_Confirmation%>
-     <% @patient.errors.full_messages_for(:password_digest_Confirmation).each do |message| %>
+     <%= form.label :password %> <br>
+     <%= form.password_field :password%>   <br>
+     <%= form.label :password_confirmation%> <br>
+     <%= form.password_field :password_confirmation%>
+     <% @patient.errors.full_messages_for(:password_confirmation).each do |message| %>
      <div> <%= message %> </div>
      <% end %>
   </div>

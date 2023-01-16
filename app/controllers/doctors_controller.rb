@@ -1,7 +1,7 @@
 class DoctorsController < ApplicationController
   def index 
     @doctors = Doctor.all
-    
+    current_patient
    end 
    def show
     

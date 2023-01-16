@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
 
    patient = Patient.find_by(name: patient_params[:name])
-   byebug
+  
    if patient && patient.authenticate(patient_params[:password])
     
 

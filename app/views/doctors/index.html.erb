@@ -1,15 +1,22 @@
+<h1> Home page doctor#index </h1>
+
 <h1>All Available Doctors</h1>
    
   <% @doctors.each do |doctor| %> 
   <%= doctor.id %>
-        <div> <%=  link_to doctor.name ,doctor %> </div>
-    <div> <%= doctor.specialization %> </div>
+     <%=  link_to doctor.name ,doctor %> <br>
+     <%= doctor.specialization %> <br><br>
  <% end %>
+ <br>
 
-  <!-- <h3><%= link_to "Sign up as a Doctors ", new_doctor_path %> </h3>  -->
- 
-   <h3><%= link_to "Sign up as a Patient", new_patient_path %> </h3>   
-  <h2> <%= link_to "login", login_path %> </h2>
 
+
+
+<% if @current_patient %>
+    <%= link_to 'Logout', '/logout', :data => { :confirm => 'Are you sure?' }%>
+<% else %>
+    <%= link_to 'Signup', new_patient_path %>
+    <%= link_to 'Login', '/login'%>
+<% end %>
 
   
