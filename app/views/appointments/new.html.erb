@@ -1,5 +1,5 @@
  
-<%= form_with model: @apointment, url: doctor_appointments_path(params[:doctor_id]) do |form| %>
+<%= form_with model: @appointment, url: doctor_appointments_path(params[:doctor_id]) do |form| %>
   
 <div class="form-group">
   <%= form.datetime_field(:date, class: "form-control col-sm-3", value: @time_now ) %>
